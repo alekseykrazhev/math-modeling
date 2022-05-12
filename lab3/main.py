@@ -37,9 +37,7 @@ def weibull_distribution(x, a, b):
     return 1 - math.exp(-a * x ** b)
 
 
-
 if __name__ == '__main__':
-
     #print('Normal distribution:')
     normally_distributed = normal_generator(mu=-5, sigma2=25,
                                             modulus=2 ** 31, a=16807, seed=16807,
@@ -74,7 +72,8 @@ if __name__ == '__main__':
                                         mcg(**mcg_params)), lambda x: exponential_distribution(x, 4)),
              "Laplace distribution":
                  (laplace_generator(1,
-                                    mcg(**mcg_params)), lambda x: laplace_distribution(x, 1)),}
+                                    mcg(**mcg_params)), lambda x: laplace_distribution(x, 1))}
+
     for name, (generator, func) in distr.items():
         print(name)
         seq = list(generator)
