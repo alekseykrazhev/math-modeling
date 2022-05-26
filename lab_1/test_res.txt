@@ -1,0 +1,5 @@
+Test Results:
+	Kolmogorov for maclaren:
+not pass
+	Pirson for maclaren:
+pass
